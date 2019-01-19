@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import MyComponent from './components/MyComponent'
+import App from './components/ApiComponent'
 
 render (
-	<MyComponent />,
+	<App />,
 	document.getElementById('app')
 )

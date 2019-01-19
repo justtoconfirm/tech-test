@@ -3,15 +3,20 @@ import React, { Component } from 'react';
 class MyComponent extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
+		/*this.state = {
 			error: null,
 			isLoaded: false,
 			items: []
+		};*/
+		this.state = {
+			pictures: []
 		};
 	}
 
+	// Lifecycle method: fetch + api call
 	componentDidMount() {
-		fetch("https://api.example.com/items")
+		//fetch("https://api.example.com/items")
+		/*fetch("https://randomuser.me/api/?results=500")
 		.then(res => res.json())
 		.then(
 			(result) => {
@@ -19,7 +24,18 @@ class MyComponent extends Component {
 					isLoaded: true,
 					items: result.items
 				});
-			},
+			},*/
+		.then(results => {
+			return results.json();
+		}).then(data => {
+			let pictures = data.results.map((pic) => {
+				return(
+					<div key={pic.results}>
+						<img src={pic.picture.medium} />
+					</div>
+				)
+			})
+		})
 			/*
 			Handle errors here
 			Instead of a catch() block so we don't swallow
