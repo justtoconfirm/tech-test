@@ -20,6 +20,11 @@ class MyComponent extends Component {
 					items: result.items
 				});
 			},
+			/*
+			Handle errors here
+			Instead of a catch() block so we don't swallow
+			exceptions from actual bugs in components.
+			*/
 			(error) => {
 				this.setState({
 					isLoaded: true,
