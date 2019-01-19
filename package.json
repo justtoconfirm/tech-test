@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/justtoconfirm/tech-test/issues"
   },
-  "homepage": "https://github.com/justtoconfirm/tech-test#readme"
+  "homepage": "https://github.com/justtoconfirm/tech-test#readme",
+  "dependencies": {
+    "react": "^16.7.0"
+  }
 }
